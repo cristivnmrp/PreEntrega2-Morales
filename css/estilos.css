@@ -1,0 +1,98 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 500px;
+    height: 400px;
+    border: 1px solid #000;
+  }
+/*Flexbox teoría*/
+.flex-container{
+    /*Activamos flex*/
+    display: flex;
+    /*definimos cual bva a ser nuestro Main axis y cual, o si será fila o columna*/
+    flex-direction: row;
+    /*dispone los elementos flexibles en el eje principal*/
+    justify-content: flex-start;
+    /*dispone los elementos flexibles en el eje secundario*/
+    align-items: flex-start;
+    /*Define los desbordes de*/
+    flex-wrap: nowrap;
+
+
+    border: 5px solid #000;
+    background-color: #3f3f3f;
+    padding: 20px;
+    margin: 20px;
+    height: 800px;
+
+}
+
+.caja{
+    /*box moddeling*/
+width: 200px;
+height: 200px;
+border: 1px solid #ccc;
+background-color: #000000;
+margin: 5px;
+
+/*tipografía*/
+color: #ffffff;
+font-family: sans-serif;
+font-weight: bold;
+
+
+}
+
+/*CSS GRID PRÁCTICA*/
+.cabecera{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*todo lo anterior hace lo mismo que un text-align: center;*/
+
+
+    /*tipografía*/
+    font-family: sans-serif;
+    font-size: 50px;
+
+    /*box-modelling*/
+    padding: 20px 0;
+
+}
+
+.grid-container{
+    /*box-modeling*/
+    width: 90%;
+    max-width: 1000px;
+    border: 10px solid #000;
+    margin: auto;
+
+    /*tipografía*/
+    font-size: 50px;
+    text-align: center;
+
+    /*Activamos Grid*/    
+    display: grid;
+    /**/
+    grid-template-columns: 3fr 2fr 1fr;
+}
+
+.grid-container >div{
+    /*Box-mdoeling*/
+    display: block;
+    border: 1px solid #000;
+    padding: 20px;
+    background-color: #f60c0c;
+    color: #ccc;
+
+
+
+}
+
+
+  
