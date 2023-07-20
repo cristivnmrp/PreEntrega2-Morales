@@ -11,45 +11,57 @@
 
 </head>
 <body>
-  <!--barra de navegación-->
-    <nav id="barra-navegacion">
-        <ul class="bordes-paginas">
-          <li>
-            <a href="#">home</a>
-          </li>
-          <li>
-            <a href="./paginas/historia.html">historia</a>
-          </li>
-          <li>
-            <a href="./paginas/tienda.html">tienda</a>
-          </li>
-          <li>
-            <a href="./paginas/ubicacion.html">ubicación</a>
-          </li>
-          <li>
-            <a href="./paginas/contacto.html">contacto</a>
-          </li>
-          <li>
-            <a target="_blank" href="https://animaltia.es/comida-de-perros/">Tipos de comida para perros</a>
-          </li>
-          <li>
-            <a target="_blank" href="https://hotelesmascotas.com/viajar-mascotas-perros/tipos-comida-gatos">Tipos de comida para gatos</a>
-          </li>
-        </ul>
+  <header>
+    <a href="./index.html" class="logo">
+      <img src="./assets/icons/gato.png" alt="logo">
+      <h2 class="nombre-pagina">Adopción de Mascotas</h2>
+    </a>
 
-        <!--Video youtube-->
+  <!--barra de navegación-->
+    <nav>
+       
+            <a href="#">home</a>
+            <a href="./paginas/historia.html">historia</a>
+
+            <a href="./paginas/tienda.html">tienda</a>
+
+            <a href="./paginas/ubicacion.html">ubicación</a>
+
+            <a href="./paginas/contacto.html">contacto</a>
+
+            <a target="_blank" href="https://animaltia.es/comida-de-perros/">Tipos de comida para perros</a>
+
+            <a target="_blank" href="https://hotelesmascotas.com/viajar-mascotas-perros/tipos-comida-gatos">Tipos de comida para gatos</a>
+
+  </header>
+        <!--Video YouTube-->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wtvk3HBJyGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <img class="contain"   src="./assets/catanddog.jpg" alt="foto-perro-y-gato">
-</body>
-<header>
 
-</header>
+</body>
+
 
 
 <main>
-    
-    <section>
+    <!--Metodología BEM-->
+    <section class="contenedor">
+      <!--Bloque 1-->
+      <article class="tarjeta">
+        <img class="tarjeta__imagen" src="./assets/edgar-nKC772R_qog-unsplash.jpg" alt="foto-perrito">
+
+        <article class="tarjeta__textos">
+          <h3 class="tarjeta__titulo">
+            <a class="tarjeta__enlace" href="#">Gatito enano</a>
+          </h3>
+          <p class="tarjeta__parrafo">Adopción de gatitos enanos</p>
+
+          <!--Bloque 2-->
+          <button class="boton">Saber más</button>
+          <!--Alternativo-->
+          <!--<button class="boton__boton--alternativo">Saber más</button>-->
+        </article>
+      </article>
       <!--Mejores comidas-->
       <article>
         Mejores comidas según expertos

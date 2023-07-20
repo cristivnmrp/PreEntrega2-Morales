@@ -1,14 +1,69 @@
-
-
-*{
+/*Tipografías*/
+@font-face {
+    font-family: 'fuente-principal';
+    src: url(../assets/fuentes/Roboto-Regular.ttf);
+}
+body{
+    background-color: rgb(101, 102, 7);
     margin: 0;
-    padding: 0;
+}
+header{
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    background-color: rgba(208, 38, 165, 0.193);
+    align-items: center;
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: white;
+    border-bottom: 3px solid #000;
+}
+
+/*ejemplos pseudoclases
+a:active{
+    background-color: #000;
+}
+a:link{
+    color: #f60c0c;
+}
+
+nav a:hover{
+    color: white;
+    border-bottom: 3px solid #000;
+}
+*/
+
+.font-main{
+    font-family:'fuente-principal', sans-serif ;
 }
 img {
     width: 500px;
     height: 400px;
     border: 1px solid #000;
-  }
+}
 /*Flexbox teoría*/
 .flex-container{
     /*Activamos flex*/
@@ -78,21 +133,100 @@ font-weight: bold;
 
     /*Activamos Grid*/    
     display: grid;
-    /**/
-    grid-template-columns: 3fr 2fr 1fr;
+    /*Definimos la cantidad de columnas y el ancho de las mismas*/
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: repeat(3,3fr);
+    gap: 5px;
+
 }
 
 .grid-container >div{
-    /*Box-mdoeling*/
+    /*Box-modeling*/
     display: block;
     border: 1px solid #000;
     padding: 20px;
     background-color: #f60c0c;
     color: #ccc;
+}
 
+/*Metodología BEM*/
+.contenedor{
+    max-width: 500px;
+    width: 100%;
+    margin: 20px;
+}
 
+/*Bloque1*/
+.tarjeta{
+    width: 600px;
+    border: 5px double #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 
+/*Elemento 1*/
+.tarjeta__imagen{
+    width: 60%;
+}
+
+/*Elemento 2*/
+.tarjeta__textos{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/*Elemento 3*/
+.tarjeta__enlace{
+    color: aqua;
+}
+
+/*Elemento 4*/
+.tarjeta__titulo{
+    color: #f60c0c;
+}
+
+.tarjeta__parrafo{
+font-size: 16px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+/*Bloque 2*/
+.boton{
+background: #000;
+display: block;
+width: 100px;
+font-weight: bold;
+font-size: 14px;
+text-align: center;
+padding: 10px;
+border-radius: 100px;
+color: #ffffff;
+gap: 20px;
+}
+
+/*Modificador*/
+.boton--alternativo{
+    font-size: 18px;
+    font-weight: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
-  
+
+/*Mediaqueries*/
+@media screen and (max-width:480px){
+    .flex-container{
+        font-size: 18px;
+        font-family: 'Roboto', sans-serif;
+        color: #212f3d;
+        font-weight: 600;
+        text-align: center;
+    }
+
+}
