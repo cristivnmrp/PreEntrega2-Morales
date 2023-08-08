@@ -7,10 +7,11 @@
     <link rel="shortcut icon" href="./assets/icons/gato.png" type="image/x-icon">
     <!--CSS-->
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./libs/bootstrap-5.3.0-dist/css/bootstrap.min.css">
     <title>Adopción de Mascotas</title>
 
 </head>
-<body>
+<body class="fondo">
   <header>
     <a href="./index.html" class="logo">
       <img src="./assets/icons/gato.png" alt="logo">
@@ -18,20 +19,45 @@
     </a>
 
   <!--barra de navegación-->
-    <nav>
-       
-            <a href="#">home</a>
-            <a href="./paginas/historia.html">historia</a>
+   
+            
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active links2" aria-current="page" href="./paginas/historia.html">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./paginas/tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </nav>
 
-            <a href="./paginas/tienda.html">tienda</a>
-
-            <a href="./paginas/ubicacion.html">ubicación</a>
-
-            <a href="./paginas/contacto.html">contacto</a>
-
-            <a target="_blank" href="https://animaltia.es/comida-de-perros/">Tipos de comida para perros</a>
-
-            <a target="_blank" href="https://hotelesmascotas.com/viajar-mascotas-perros/tipos-comida-gatos">Tipos de comida para gatos</a>
 
   </header>
         <!--Video YouTube-->

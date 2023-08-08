@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/icons/gato.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/estilos.css">
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="../libs/bootstrap-5.3.0-dist/css/bootstrap.min.css">
     <title>Contacto</title>
 </head>
 <body>
@@ -34,17 +36,19 @@
 
     <h3>Favor indícanos tus datos</h3>
 <!--formulario-->
-<form action="procesar.php" method="post"></form>
-<div>
-    <label for="nombre">Nombre:</label>
-    <input type="text" name="nombre" placeholder="juan">
-</div>
+<div class="container">
+    <form action="procesar.php" method="post"></form>
+        <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" placeholder="juan">
+        </div>
 <div>
     <label for="apellido">Apellido:</label>
     <input type="text" name="apellido" placeholder="perez">
+    </div>
 </div>
 
-<div>
+<div >
     <label for="correo">Correo eléctronico</label>
     <input type="text" name="correo" placeholder="juanperez@hola.com">
 </div>
@@ -58,8 +62,8 @@
 <h3>Déjanos aquí tu mensaje</h3>
 <textarea name="mensaje" id=" " cols="30" rows="10"></textarea>
 
-<button type="submit">Enviar</button>
-<button type="reset">borrar formulario</button>
+<button type="submit" class="btn btn-outline-dark">Enviar</button>
+<button type="reset" class="btn btn-outline-dark">borrar formulario</button>
 </body>
 
 <footer>
