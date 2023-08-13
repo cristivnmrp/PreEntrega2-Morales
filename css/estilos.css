@@ -88,8 +88,8 @@ img {
 
 .caja{
     /*box moddeling*/
-width: 200px;
-height: 200px;
+width: 100px;
+height: 100px;
 border: 1px solid #ccc;
 background-color: #000000;
 margin: 5px;
@@ -120,7 +120,7 @@ font-weight: bold;
 
 }
 
-.grid-container{
+.ejemplo{
     /*box-modeling*/
     width: 90%;
     max-width: 1000px;
@@ -140,7 +140,7 @@ font-weight: bold;
 
 }
 
-.grid-container >div{
+.gri{
     /*Box-modeling*/
     display: block;
     border: 1px solid #000;
@@ -148,9 +148,27 @@ font-weight: bold;
     background-color: #f60c0c;
     color: #ccc;
 }
-
-/*Metodología BEM*/
-.contenedor{
+.cuadro-adopcion{
+    /*Activamos Grid*/    
+    display: grid;
+    /*box-modeling*/
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    padding: 20px;
+    margin: auto;
+}
+.cuadro__item{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.cuadro__imagen{
+    width: 100%;
+    margin: 5px;
+}
+/*Metodología BEM*/ß
+.contenedor1{
     max-width: 500px;
     width: 100%;
     margin: 20px;
@@ -227,4 +245,9 @@ gap: 20px;
         text-align: center;
     }
 
+}
+@media (max-width:520px){
+    .cuadro-adopcion{
+        grid-template-columns: repeat(2,50%);
+    }
 }
