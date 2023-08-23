@@ -1,50 +1,30 @@
 /*Variables*/
 $color-primario: blue;
 $color-secundario: gray;
+/*Tipografías*/
+$color_1: black;
+$color_2: #ffffff;
+$color_3: #ccc;
+$color_4: #000;
+$color_5: aqua;
+$color_6: #f60c0c;
+$color_7: #212f3d;
+$font-family_1: 'fuente-principal', sans-serif;
+$font-family_2: sans-serif;
+$font-family_3: Arial, Helvetica, sans-serif;
+$font-family_4: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-family_5: 'Roboto', sans-serif;
+$background-color_1: #bbd5f9;
+$background-color_2: #74a7e4;
+$background-color_3: #3f3f3f;
+$background-color_4: #000000;
+$background-color_5: #f60c0c;
 
 /*Tipografías*/
 @font-face {
-    font-family: 'fuente-principal';
-    src: url(../assets/fuentes/Roboto-Regular.ttf);
+	font-family: 'fuente-principal';
+	src: url(../assets/fuentes/Roboto-Regular.ttf);
 }
-.fondo{
-    background-color: #bbd5f9;
-    margin: 0;
-}
-.barra-nav{
-    display: flex;
-    height: 70px;
-    justify-content: space-between;
-    background-color: #74a7e4;
-    align-items: center;
-    padding: 10px;
-}
-
-.logo{
-    display: flex;
-    align-items: center;
-}
-
-.logo img{
-    height: 50px;
-    width: 50px;
-    margin-right: 10px;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-.links{
-    font-weight: 600;
-    padding-right: 10px;
-}
-
-a:hover{
-    border-bottom: 1px solid #000;
-}
-
 /*ejemplos pseudoclases
 a:active{
     background-color: #000;
@@ -58,200 +38,190 @@ nav a:hover{
     border-bottom: 3px solid #000;
 }
 */
-
-.font-main{
-    font-family:'fuente-principal', sans-serif ;
+/*Flexbox teoría*/
+/*CSS GRID PRÁCTICA*/
+/*Metodología BEM*/
+/*Bloque1*/
+/*Elemento 1*/
+/*Elemento 2*/
+/*Elemento 3*/
+/*Elemento 4*/
+/*Bloque 2*/
+/*Modificador*/
+/*Mediaqueries*/
+.fondo {
+	background-color: $background-color_1;
+	margin: 0;
+}
+.barra-nav {
+	display: flex;
+	height: 70px;
+	justify-content: space-between;
+	background-color: $background-color_2;
+	align-items: center;
+	padding: 10px;
+}
+.logo {
+	display: flex;
+	align-items: center;
+	img {
+		height: 50px;
+		width: 50px;
+		margin-right: 10px;
+	}
+}
+a {
+	text-decoration: none;
+	color: $color_1;
+	&:hover {
+		border-bottom: 1px solid #000;
+	}
+}
+.links {
+	font-weight: 600;
+	padding-right: 10px;
+}
+.font-main {
+	font-family: $font-family_1;
 }
 img {
-    width: 500px;
-    height: 400px;
-    border: 1px solid #000;
+	width: 500px;
+	height: 400px;
+	border: 1px solid #000;
 }
-/*Flexbox teoría*/
-.flex-container{
-    /*Activamos flex*/
-    display: flex;
-    /*definimos cual bva a ser nuestro Main axis y cual, o si será fila o columna*/
-    flex-direction: row;
-    /*dispone los elementos flexibles en el eje principal*/
-    justify-content: flex-start;
-    /*dispone los elementos flexibles en el eje secundario*/
-    align-items: flex-start;
-    /*Define los desbordes de*/
-    flex-wrap: nowrap;
-
-
-    border: 5px solid #000;
-    background-color: #3f3f3f;
-    padding: 20px;
-    margin: 20px;
-    height: 800px;
-
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	border: 5px solid #000;
+	background-color: $background-color_3;
+	padding: 20px;
+	margin: 20px;
+	height: 800px;
 }
-
-.caja{
-    /*box moddeling*/
-width: 100px;
-height: 100px;
-border: 1px solid #ccc;
-background-color: #000000;
-margin: 5px;
-
-/*tipografía*/
-color: #ffffff;
-font-family: sans-serif;
-font-weight: bold;
-
-
+.caja {
+	width: 100px;
+	height: 100px;
+	border: 1px solid #ccc;
+	background-color: $background-color_4;
+	margin: 5px;
+	color: $color_2;
+	font-family: $font-family_2;
+	font-weight: bold;
 }
-
-/*CSS GRID PRÁCTICA*/
-.cabecera{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /*todo lo anterior hace lo mismo que un text-align: center;*/
-
-
-    /*tipografía*/
-    font-family: sans-serif;
-    font-size: 50px;
-
-    /*box-modelling*/
-    padding: 20px 0;
-
+.cabecera {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-family: $font-family_2;
+	font-size: 50px;
+	padding: 20px 0;
 }
-
-.ejemplo{
-    /*box-modeling*/
-    width: 90%;
-    max-width: 1000px;
-    border: 10px solid #000;
-    margin: auto;
-
-    /*tipografía*/
-    font-size: 50px;
-    text-align: center;
-
-    /*Activamos Grid*/    
-    display: grid;
-    /*Definimos la cantidad de columnas y el ancho de las mismas*/
-    grid-template-columns: 3fr 3fr 3fr;
-    grid-template-rows: repeat(3,3fr);
-    gap: 5px;
-
+.ejemplo {
+	width: 90%;
+	max-width: 1000px;
+	border: 10px solid #000;
+	margin: auto;
+	font-size: 50px;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 3fr 3fr 3fr;
+	grid-template-rows: repeat(3,3fr);
+	gap: 5px;
 }
-
-.gri{
-    /*Box-modeling*/
-    display: block;
-    border: 1px solid #000;
-    padding: 20px;
-    background-color: #f60c0c;
-    color: #ccc;
+.gri {
+	display: block;
+	border: 1px solid #000;
+	padding: 20px;
+	background-color: $background-color_5;
+	color: $color_3;
 }
-.cuadro-adopcion{
-    /*Activamos Grid*/    
-    display: grid;
-    /*box-modeling*/
-    grid-template-columns: repeat(3,1fr);
-    grid-auto-rows: auto;
-    grid-gap: 10px;
-    padding: 20px;
-    margin: auto;
-    width: 90%;
+.cuadro-adopcion {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-auto-rows: auto;
+	grid-gap: 10px;
+	padding: 20px;
+	margin: auto;
+	width: 90%;
 }
-.cuadro__item{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.cuadro__item {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
-.cuadro__imagen{
-    width: 100%;
-    margin: 5px;
+.cuadro__imagen {
+	width: 100%;
+	margin: 5px;
 }
-/*Metodología BEM*/ß
-.contenedor1{
-    max-width: 500px;
-    width: 100%;
-    margin: 20px;
+ß {
+	.contenedor1 {
+		max-width: 500px;
+		width: 100%;
+		margin: 20px;
+	}
 }
-
-/*Bloque1*/
-.tarjeta{
-    width: 600px;
-    border: 5px double #ccc;
-    border-radius: 20px;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+.tarjeta {
+	width: 600px;
+	border: 5px double #ccc;
+	border-radius: 20px;
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
 }
-
-/*Elemento 1*/
-.tarjeta__imagen{
-    width: 60%;
+.tarjeta__imagen {
+	width: 60%;
 }
-
-/*Elemento 2*/
-.tarjeta__textos{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #000;
+.tarjeta__textos {
+	font-family: $font-family_3;
+	font-size: 18px;
+	margin-bottom: 20px;
+	color: $color_4;
 }
-
-/*Elemento 3*/
-.tarjeta__enlace{
-    color: aqua;
+.tarjeta__enlace {
+	color: $color_5;
 }
-
-/*Elemento 4*/
-.tarjeta__titulo{
-    color: #f60c0c;
+.tarjeta__titulo {
+	color: $color_6;
 }
-
-.tarjeta__parrafo{
-font-size: 16px;
-margin-top: 10px;
-margin-bottom: 10px;
+.tarjeta__parrafo {
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
-/*Bloque 2*/
-.boton{
-background: #000;
-display: block;
-width: 100px;
-font-weight: bold;
-font-size: 14px;
-text-align: center;
-padding: 10px;
-border-radius: 100px;
-color: #ffffff;
-gap: 20px;  
+.boton {
+	background: #000;
+	display: block;
+	width: 100px;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	padding: 10px;
+	border-radius: 100px;
+	color: $color_2;
+	gap: 20px;
 }
-
-/*Modificador*/
-.boton--alternativo{
-    font-size: 18px;
-    font-weight: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.boton--alternativo {
+	font-size: 18px;
+	font-weight: 10px;
+	font-family: $font-family_4;
 }
-
-/*Mediaqueries*/
-@media screen and (max-width:480px){
-    .flex-container{
-        font-size: 18px;
-        font-family: 'Roboto', sans-serif;
-        color: #212f3d;
-        font-weight: 600;
-        text-align: center;
-    }
-
+@media screen and (max-width:480px) {
+	.flex-container {
+		font-size: 18px;
+		font-family: $font-family_5;
+		color: $color_7;
+		font-weight: 600;
+		text-align: center;
+	}
 }
-@media (max-width:520px){
-    .cuadro-adopcion{
-        grid-template-columns: repeat(2,50%);
-    }
+@media (max-width:520px) {
+	.cuadro-adopcion {
+		grid-template-columns: repeat(2,50%);
+	}
 }
